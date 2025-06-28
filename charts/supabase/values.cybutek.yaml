@@ -37,7 +37,7 @@ studio:
   environment:
     STUDIO_DEFAULT_ORGANIZATION: "My Organization"
     STUDIO_DEFAULT_PROJECT: "My Project"
-    SUPABASE_PUBLIC_URL: http://example.com/
+    SUPABASE_PUBLIC_URL: http://supabase.cybutek.com/
     NEXT_PUBLIC_ENABLE_LOGS: "true"
   livenessProbe:
     httpGet:
@@ -51,8 +51,8 @@ auth:
   environment:
     DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
     DB_USER: app
-    API_EXTERNAL_URL: http://example.com
-    GOTRUE_SITE_URL: http://example.com
+    API_EXTERNAL_URL: http://supabase.cybutek.com
+    GOTRUE_SITE_URL: http://supabase.cybutek.com
     GOTRUE_EXTERNAL_EMAIL_ENABLED: "true"
     GOTRUE_MAILER_AUTOCONFIRM: "true"
     GOTRUE_SMTP_ADMIN_EMAIL: "your-mail@example.com"
