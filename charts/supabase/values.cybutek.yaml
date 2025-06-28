@@ -148,7 +148,7 @@ kong:
       #   hosts:
       #     - example.com
     hosts:
-      - host: example.com
+      - host: supabase.cybutek.com
         paths:
           - path: /
             pathType: Prefix
