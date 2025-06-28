@@ -4,20 +4,21 @@ secret:
     serviceKey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q
     secret: your-super-secret-jwt-token-with-at-least-32-characters-long
   smtp:
-    username: your-mail@example.com
+    username: cybutek.ad@gmail.com
     password: example123456
   dashboard:
     username: supabase
     password: this_password_is_insecure_and_should_be_updated
   db:
-    username: postgres
-    password: example123456
-    database: postgres
+    username: app
+    password: buS4B7MEDqciLiECkE92RcwSGiKNL1q0xkSow17PCI1UksvuE6AUYvuQAtbdBbQG
+    database: app
+    db_hostname: cybutek-cnpg-cluster-rw.cloudnative-pg
   analytics:
     apiKey: your-super-secret-and-long-logflare-key
 
 db:
-  enabled: true
+  enabled: false
   image:
     tag: 15.1.0.147
   livenessProbe:
