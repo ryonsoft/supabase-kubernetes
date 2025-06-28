@@ -72,6 +72,21 @@ realtime:
       path: /
       port: 4000
     initialDelaySeconds: 3
+  environment:
+    # Override the database hostname if using external database
+    DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
+    DB_USER: app
+    DB_PORT: 5432
+    DB_SSL: disable  # disable, allow, prefer, require, verify-ca, verify-full
+    DB_AFTER_CONNECT_QUERY: "SET search_path TO _realtime"
+    DB_ENC_KEY: supabaserealtime
+    PORT: "4000"
+    FLY_ALLOC_ID: fly123
+    FLY_APP_NAME: realtime
+    SECRET_KEY_BASE: UpNVntn3cDxHJpq99YMc1T1AQgQpc8kfYTuRgBiYa15BLrx8etQoXz3gZv1/u2oq
+    ERL_AFLAGS: -proto_dist inet_tcp
+    ENABLE_TAILSCALE: "false"
+    DNS_NODES: "''"
 
 meta:
   image:
@@ -87,6 +102,20 @@ storage:
     initialDelaySeconds: 3
   persistence:
     enabled: false
+  environment:
+    # Override the database hostname if using external database
+    DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
+    DB_USER: app
+    DB_PORT: 5432
+    DB_DRIVER: postgres
+    DB_SSL: disable  # disable, allow, prefer, require, verify-ca, verify-full
+    PGOPTIONS: -c search_path=storage,public
+    FILE_SIZE_LIMIT: "52428800"
+    STORAGE_BACKEND: file  # file, s3
+    FILE_STORAGE_BACKEND_PATH: /var/lib/storage
+    TENANT_ID: stub
+    REGION: stub
+    GLOBAL_S3_BUCKET: stub
 
 imgproxy:
   image:
