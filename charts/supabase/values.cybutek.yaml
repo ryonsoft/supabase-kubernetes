@@ -49,6 +49,8 @@ auth:
   image:
     tag: v2.143.0
   environment:
+    DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
+    DB_USER: app
     API_EXTERNAL_URL: http://example.com
     GOTRUE_SITE_URL: http://example.com
     GOTRUE_EXTERNAL_EMAIL_ENABLED: "true"
