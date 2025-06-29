@@ -209,6 +209,10 @@ functions:
     DB_PORT: 5432
     DB_DRIVER: postgresql
     DB_SSL: disable  # disable, allow, prefer, require, verify-ca, verify-full
+    HTTP_PROXY: http://10.0.1.25:3128
+    HTTPS_PROXY: http://10.0.1.25:3128
+    NO_PROXY: 127.0.0.1,localhost,.svc,.cluster.local
+    DOCKER_HOST: tcp://localhost:2376
   # Mount user functions
   # volumeMounts:
   #   - name: my_functions
