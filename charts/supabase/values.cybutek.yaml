@@ -91,6 +91,14 @@ realtime:
 meta:
   image:
     tag: v0.80.0
+  environment:
+    # Override the database hostname if using external database
+    DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
+    DB_USER: app
+    DB_PORT: 5432
+    DB_DRIVER: postgres
+    DB_SSL: disable  # disable, allow, prefer, require, verify-ca, verify-full
+    PG_META_PORT: "8080"
 
 storage:
   image:
