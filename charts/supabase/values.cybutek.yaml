@@ -33,7 +33,7 @@ db:
 
 studio:
   image:
-    tag: 20240326-5e5586d
+    tag: 2025.06.30-sha-6f5982d
   environment:
     STUDIO_DEFAULT_ORGANIZATION: "My Organization"
     STUDIO_DEFAULT_PROJECT: "My Project"
@@ -47,7 +47,7 @@ studio:
 
 auth:
   image:
-    tag: v2.143.0
+    tag: v2.176.2-rc.6
   environment:
     DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
     DB_USER: app
@@ -62,11 +62,11 @@ auth:
 
 rest:
   image:
-    tag: v12.0.1
+    tag: v13.0.4
 
 realtime:
   image:
-    tag: v2.27.5
+    tag: v2.39.4
   livenessProbe:
     httpGet:
       path: /
@@ -90,7 +90,7 @@ realtime:
 
 meta:
   image:
-    tag: v0.80.0
+    tag: v0.89.3
   environment:
     # Override the database hostname if using external database
     DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
@@ -102,7 +102,7 @@ meta:
 
 storage:
   image:
-    tag: v0.46.4
+    tag: v1.24.7
   livenessProbe:
     httpGet:
       path: /status
@@ -163,7 +163,7 @@ kong:
 
 analytics:
   image:
-    tag: 1.4.0
+    tag: 1.14.2
   livenessProbe:
     httpGet:
       path: /health
@@ -201,7 +201,7 @@ vector:
 
 functions:
   image:
-    tag: v1.41.2
+    tag: v1.67.4
   environment:
     # Override the database hostname if using external database
     DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
