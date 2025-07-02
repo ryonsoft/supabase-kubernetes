@@ -47,7 +47,7 @@ studio:
 
 auth:
   image:
-    tag: v2.176.2-rc.6
+    tag: v2.176.1
   environment:
     DB_HOST: cybutek-cnpg-cluster-rw.cloudnative-pg
     DB_USER: app
@@ -62,11 +62,11 @@ auth:
 
 rest:
   image:
-    tag: v13.0.4
+    tag: v12.2.12
 
 realtime:
   image:
-    tag: v2.39.4
+    tag: v2.34.47
   livenessProbe:
     httpGet:
       path: /
@@ -182,7 +182,7 @@ analytics:
 
 vector:
   image:
-    tag: 0.34.0-alpine
+    tag: 0.28.1-alpine
   livenessProbe:
     httpGet:
       path: /health
